@@ -16,7 +16,7 @@ fn main() {
                 let percentage = battery.state_of_charge().value * 100.0;
                 let state = battery.state();
 
-                if percentage < 10.0 && state != State::Charging {
+                if percentage < 15.0 && state != State::Charging {
                     // Send a notification if below 10% and not charging
                     Notification::new()
                         .summary("Low Battery")
